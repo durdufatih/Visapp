@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C1FE7D429770C6100DFE087 /* VisaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE7D329770C6100DFE087 /* VisaAppApp.swift */; };
+		3C1FE7D629770C6100DFE087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE7D529770C6100DFE087 /* ContentView.swift */; };
+		3C1FE7D829770C6300DFE087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1FE7D729770C6300DFE087 /* Assets.xcassets */; };
+		3C1FE7DC29770C6300DFE087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1FE7DB29770C6300DFE087 /* Preview Assets.xcassets */; };
+		3C1FE7E629770C6300DFE087 /* VisaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE7E529770C6300DFE087 /* VisaAppTests.swift */; };
+		3C1FE7F029770C6300DFE087 /* VisaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE7EF29770C6300DFE087 /* VisaAppUITests.swift */; };
+		3C1FE7F229770C6300DFE087 /* VisaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE7F129770C6300DFE087 /* VisaAppUITestsLaunchTests.swift */; };
+		3C1FE80029770DC500DFE087 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE7FF29770DC500DFE087 /* SearchView.swift */; };
+		3C1FE80329770E4200DFE087 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE80229770E4200DFE087 /* View+Utils.swift */; };
+		3C1FE8052977224F00DFE087 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FE8042977224F00DFE087 /* ResultsView.swift */; };
+		3CB3151429786EF300D3C6E3 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3151329786EF300D3C6E3 /* Country.swift */; };
+		3CB31517297870A000D3C6E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB31516297870A000D3C6E3 /* GoogleService-Info.plist */; };
+		3CB3151A2978722500D3C6E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB315192978722500D3C6E3 /* FirebaseAuth */; };
+		3CB3151C297875AB00D3C6E3 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3151B297875AB00D3C6E3 /* FirebaseManager.swift */; };
+		3CB3151F2978781B00D3C6E3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB3151E2978781B00D3C6E3 /* FirebaseFirestoreSwift */; };
+		3CB315212978784500D3C6E3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB315202978784500D3C6E3 /* FirebaseFirestore */; };
+		3CB315232978785300D3C6E3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB315222978785300D3C6E3 /* FirebaseStorage */; };
+		3CB315252978822000D3C6E3 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB315242978822000D3C6E3 /* FirebaseDatabaseSwift */; };
+		3CB31528297D54EF00D3C6E3 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB31527297D54EF00D3C6E3 /* CountryListView.swift */; };
+		3CB3152A297D617500D3C6E3 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C1FE7E229770C6300DFE087 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C1FE7C829770C6100DFE087 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C1FE7CF29770C6100DFE087;
+			remoteInfo = VisaApp;
+		};
+		3C1FE7EC29770C6300DFE087 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C1FE7C829770C6100DFE087 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C1FE7CF29770C6100DFE087;
+			remoteInfo = VisaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C1FE7D029770C6100DFE087 /* VisaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1FE7D329770C6100DFE087 /* VisaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaAppApp.swift; sourceTree = "<group>"; };
+		3C1FE7D529770C6100DFE087 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3C1FE7D729770C6300DFE087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C1FE7D929770C6300DFE087 /* VisaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VisaApp.entitlements; sourceTree = "<group>"; };
+		3C1FE7DB29770C6300DFE087 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C1FE7E129770C6300DFE087 /* VisaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1FE7E529770C6300DFE087 /* VisaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaAppTests.swift; sourceTree = "<group>"; };
+		3C1FE7EB29770C6300DFE087 /* VisaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1FE7EF29770C6300DFE087 /* VisaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaAppUITests.swift; sourceTree = "<group>"; };
+		3C1FE7F129770C6300DFE087 /* VisaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C1FE7FF29770DC500DFE087 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		3C1FE80229770E4200DFE087 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		3C1FE8042977224F00DFE087 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		3CB3151329786EF300D3C6E3 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3CB31516297870A000D3C6E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3CB3151B297875AB00D3C6E3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		3CB31527297D54EF00D3C6E3 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C1FE7CD29770C6100DFE087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB315252978822000D3C6E3 /* FirebaseDatabaseSwift in Frameworks */,
+				3CB3151A2978722500D3C6E3 /* FirebaseAuth in Frameworks */,
+				3CB315232978785300D3C6E3 /* FirebaseStorage in Frameworks */,
+				3CB3151F2978781B00D3C6E3 /* FirebaseFirestoreSwift in Frameworks */,
+				3CB315212978784500D3C6E3 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1FE7DE29770C6300DFE087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1FE7E829770C6300DFE087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C1FE7C729770C6100DFE087 = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7D229770C6100DFE087 /* VisaApp */,
+				3C1FE7E429770C6300DFE087 /* VisaAppTests */,
+				3C1FE7EE29770C6300DFE087 /* VisaAppUITests */,
+				3C1FE7D129770C6100DFE087 /* Products */,
+				3CB3151D2978781B00D3C6E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C1FE7D129770C6100DFE087 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7D029770C6100DFE087 /* VisaApp.app */,
+				3C1FE7E129770C6300DFE087 /* VisaAppTests.xctest */,
+				3C1FE7EB29770C6300DFE087 /* VisaAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C1FE7D229770C6100DFE087 /* VisaApp */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7D329770C6100DFE087 /* VisaAppApp.swift */,
+				3C1FE7D529770C6100DFE087 /* ContentView.swift */,
+				3CB3151B297875AB00D3C6E3 /* FirebaseManager.swift */,
+				3C1FE7FE29770C9600DFE087 /* View */,
+				3CB3151229786EC300D3C6E3 /* Model */,
+				3C1FE80129770E2C00DFE087 /* Extensions */,
+				3C1FE7D729770C6300DFE087 /* Assets.xcassets */,
+				3C1FE7D929770C6300DFE087 /* VisaApp.entitlements */,
+				3CB315152978708300D3C6E3 /* SupportingFiles */,
+				3C1FE7DA29770C6300DFE087 /* Preview Content */,
+			);
+			path = VisaApp;
+			sourceTree = "<group>";
+		};
+		3C1FE7DA29770C6300DFE087 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7DB29770C6300DFE087 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C1FE7E429770C6300DFE087 /* VisaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7E529770C6300DFE087 /* VisaAppTests.swift */,
+			);
+			path = VisaAppTests;
+			sourceTree = "<group>";
+		};
+		3C1FE7EE29770C6300DFE087 /* VisaAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7EF29770C6300DFE087 /* VisaAppUITests.swift */,
+				3C1FE7F129770C6300DFE087 /* VisaAppUITestsLaunchTests.swift */,
+			);
+			path = VisaAppUITests;
+			sourceTree = "<group>";
+		};
+		3C1FE7FE29770C9600DFE087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7FF29770DC500DFE087 /* SearchView.swift */,
+				3CB3152B297D64A300D3C6E3 /* Countries */,
+				3C1FE8042977224F00DFE087 /* ResultsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3C1FE80129770E2C00DFE087 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE80229770E4200DFE087 /* View+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3CB3151229786EC300D3C6E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3151329786EF300D3C6E3 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CB315152978708300D3C6E3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3CB31516297870A000D3C6E3 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3CB3151D2978781B00D3C6E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CB3152B297D64A300D3C6E3 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				3CB31527297D54EF00D3C6E3 /* CountryListView.swift */,
+				3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C1FE7CF29770C6100DFE087 /* VisaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C1FE7F529770C6300DFE087 /* Build configuration list for PBXNativeTarget "VisaApp" */;
+			buildPhases = (
+				3C1FE7CC29770C6100DFE087 /* Sources */,
+				3C1FE7CD29770C6100DFE087 /* Frameworks */,
+				3C1FE7CE29770C6100DFE087 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisaApp;
+			packageProductDependencies = (
+				3CB315192978722500D3C6E3 /* FirebaseAuth */,
+				3CB3151E2978781B00D3C6E3 /* FirebaseFirestoreSwift */,
+				3CB315202978784500D3C6E3 /* FirebaseFirestore */,
+				3CB315222978785300D3C6E3 /* FirebaseStorage */,
+				3CB315242978822000D3C6E3 /* FirebaseDatabaseSwift */,
+			);
+			productName = VisaApp;
+			productReference = 3C1FE7D029770C6100DFE087 /* VisaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C1FE7E029770C6300DFE087 /* VisaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C1FE7F829770C6300DFE087 /* Build configuration list for PBXNativeTarget "VisaAppTests" */;
+			buildPhases = (
+				3C1FE7DD29770C6300DFE087 /* Sources */,
+				3C1FE7DE29770C6300DFE087 /* Frameworks */,
+				3C1FE7DF29770C6300DFE087 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C1FE7E329770C6300DFE087 /* PBXTargetDependency */,
+			);
+			name = VisaAppTests;
+			productName = VisaAppTests;
+			productReference = 3C1FE7E129770C6300DFE087 /* VisaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C1FE7EA29770C6300DFE087 /* VisaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C1FE7FB29770C6300DFE087 /* Build configuration list for PBXNativeTarget "VisaAppUITests" */;
+			buildPhases = (
+				3C1FE7E729770C6300DFE087 /* Sources */,
+				3C1FE7E829770C6300DFE087 /* Frameworks */,
+				3C1FE7E929770C6300DFE087 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C1FE7ED29770C6300DFE087 /* PBXTargetDependency */,
+			);
+			name = VisaAppUITests;
+			productName = VisaAppUITests;
+			productReference = 3C1FE7EB29770C6300DFE087 /* VisaAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C1FE7C829770C6100DFE087 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3C1FE7CF29770C6100DFE087 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					3C1FE7E029770C6300DFE087 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3C1FE7CF29770C6100DFE087;
+					};
+					3C1FE7EA29770C6300DFE087 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3C1FE7CF29770C6100DFE087;
+					};
+				};
+			};
+			buildConfigurationList = 3C1FE7CB29770C6100DFE087 /* Build configuration list for PBXProject "VisaApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C1FE7C729770C6100DFE087;
+			packageReferences = (
+				3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 3C1FE7D129770C6100DFE087 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C1FE7CF29770C6100DFE087 /* VisaApp */,
+				3C1FE7E029770C6300DFE087 /* VisaAppTests */,
+				3C1FE7EA29770C6300DFE087 /* VisaAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C1FE7CE29770C6100DFE087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C1FE7DC29770C6300DFE087 /* Preview Assets.xcassets in Resources */,
+				3C1FE7D829770C6300DFE087 /* Assets.xcassets in Resources */,
+				3CB31517297870A000D3C6E3 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1FE7DF29770C6300DFE087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1FE7E929770C6300DFE087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C1FE7CC29770C6100DFE087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C1FE7D629770C6100DFE087 /* ContentView.swift in Sources */,
+				3C1FE80029770DC500DFE087 /* SearchView.swift in Sources */,
+				3CB3151C297875AB00D3C6E3 /* FirebaseManager.swift in Sources */,
+				3CB3152A297D617500D3C6E3 /* CountryListViewModel.swift in Sources */,
+				3CB31528297D54EF00D3C6E3 /* CountryListView.swift in Sources */,
+				3C1FE80329770E4200DFE087 /* View+Utils.swift in Sources */,
+				3C1FE8052977224F00DFE087 /* ResultsView.swift in Sources */,
+				3CB3151429786EF300D3C6E3 /* Country.swift in Sources */,
+				3C1FE7D429770C6100DFE087 /* VisaAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1FE7DD29770C6300DFE087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C1FE7E629770C6300DFE087 /* VisaAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1FE7E729770C6300DFE087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C1FE7F029770C6300DFE087 /* VisaAppUITests.swift in Sources */,
+				3C1FE7F229770C6300DFE087 /* VisaAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C1FE7E329770C6300DFE087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C1FE7CF29770C6100DFE087 /* VisaApp */;
+			targetProxy = 3C1FE7E229770C6300DFE087 /* PBXContainerItemProxy */;
+		};
+		3C1FE7ED29770C6300DFE087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C1FE7CF29770C6100DFE087 /* VisaApp */;
+			targetProxy = 3C1FE7EC29770C6300DFE087 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C1FE7F329770C6300DFE087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C1FE7F429770C6300DFE087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3C1FE7F629770C6300DFE087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VisaApp/VisaApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VisaApp/Preview Content\"";
+				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alozy.VisaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C1FE7F729770C6300DFE087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VisaApp/VisaApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VisaApp/Preview Content\"";
+				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alozy.VisaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C1FE7F929770C6300DFE087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alozy.VisaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisaApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisaApp";
+			};
+			name = Debug;
+		};
+		3C1FE7FA29770C6300DFE087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alozy.VisaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisaApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisaApp";
+			};
+			name = Release;
+		};
+		3C1FE7FC29770C6300DFE087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alozy.VisaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VisaApp;
+			};
+			name = Debug;
+		};
+		3C1FE7FD29770C6300DFE087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alozy.VisaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VisaApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C1FE7CB29770C6100DFE087 /* Build configuration list for PBXProject "VisaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1FE7F329770C6300DFE087 /* Debug */,
+				3C1FE7F429770C6300DFE087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C1FE7F529770C6300DFE087 /* Build configuration list for PBXNativeTarget "VisaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1FE7F629770C6300DFE087 /* Debug */,
+				3C1FE7F729770C6300DFE087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C1FE7F829770C6300DFE087 /* Build configuration list for PBXNativeTarget "VisaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1FE7F929770C6300DFE087 /* Debug */,
+				3C1FE7FA29770C6300DFE087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C1FE7FB29770C6300DFE087 /* Build configuration list for PBXNativeTarget "VisaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C1FE7FC29770C6300DFE087 /* Debug */,
+				3C1FE7FD29770C6300DFE087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CB315192978722500D3C6E3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3CB3151E2978781B00D3C6E3 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		3CB315202978784500D3C6E3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3CB315222978785300D3C6E3 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3CB315242978822000D3C6E3 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3C1FE7C829770C6100DFE087 /* Project object */;
+}
