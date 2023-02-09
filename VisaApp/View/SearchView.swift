@@ -13,6 +13,7 @@ struct SearchView: View {
     @State private var fromTitle: String?
     @State private var toTitle: String?
     @State private var showCountryListView = false
+    @State private var selectFromTitle = false
     
     // MARK: - Body
     var body: some View {
@@ -24,16 +25,19 @@ struct SearchView: View {
                     
                     /// To
                     toView
+                    
+                    
                 }
                 .padding(15)
                 .vAlign(.top)
             }
             .navigationTitle("Search")
             .sheet(isPresented: $showCountryListView) {
-                CountryListView(viewModel: CountryListViewModel())
+                CountryListView(viewModel: CountryListViewModel(),selectedItem: selectFromTitle ? $fromTitle:$toTitle)
             }
         }
     }
+    
     
     // MARK: - From
     @ViewBuilder
@@ -72,7 +76,7 @@ struct SearchView: View {
         Button {
             selectFrom()
         } label: {
-            Text(fromTitle ?? "Select To")
+            Text(toTitle ?? "Select To")
                 .hAlignment(.leading)
         }
         .font(.callout)
@@ -87,10 +91,12 @@ struct SearchView: View {
 extension SearchView {
     func selectFrom() {
         showCountryListView.toggle()
+        selectFromTitle = true
     }
     
     func selectTo() {
         showCountryListView.toggle()
+        selectFromTitle = false
     }
 }
 

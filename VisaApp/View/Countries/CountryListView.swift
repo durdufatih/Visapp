@@ -12,6 +12,8 @@ struct CountryListView: View {
     // MARK: - Properties
     @StateObject var viewModel: CountryListViewModel
     private let grid = [GridItem()]
+    @Environment(\.presentationMode) var presentationMode
+    @Binding  var selectedItem:String?
     
     // MARK: - Body
     var body: some View {
@@ -24,16 +26,23 @@ struct CountryListView: View {
             ScrollView() {
                 LazyVGrid(columns: grid) {
                     ForEach(viewModel.countries, id: \.id) { country in
-                        CountryListCellView(title: country.name)
+                        Button {
+                            selectedItem = country.name
+                            self.presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            CountryListCellView(title: country.name)
+                        }
+
                     }
                 }
                 .padding(15)
-            }
+            }.interactiveDismissDisabled((selectedItem?.isEmpty ?? false))
         }
         .onAppear {
             viewModel.fetchCountryList()
         }
     }
+    
 }
 
 //struct CountryListView_Previews: PreviewProvider {
