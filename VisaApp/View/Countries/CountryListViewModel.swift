@@ -17,6 +17,8 @@ protocol CountryListViewModelProtocol: ObservableObject {
 class CountryListViewModel: ObservableObject, CountryListViewModelProtocol {
     
     @Published var countries: [Country] = []
+    @Published var fromData: String = ""
+    @Published var toData: String = ""
     
     func fetchCountryList() {
         
