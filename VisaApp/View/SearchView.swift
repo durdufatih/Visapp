@@ -27,7 +27,7 @@ struct SearchView: View {
                     toView
                     
                     ///Action button
-                    actionButton
+                    actionButton.padding(.vertical)
                     
                 }
                 .padding(15)
@@ -43,12 +43,19 @@ struct SearchView: View {
     @ViewBuilder
     private var actionButton:some View{
         Button {
-            checkVariables() ? print("Action \(self.fromTitle!) to \(self.toTitle!)"): print("Exception")
+            print("Action \(self.fromTitle!) to \(self.toTitle!)")
                 
         } label: {
-            Text("Go To Plesure :)")
-                .font(.caption).hAlignment(.center)
+            Text("Trip To Advanture")
+                .padding(10)
+                .foregroundColor(.white)
+                .fontWeight(.bold)
+                .font(.callout)
+                .hAlignment(.center)
         }
+        .disabled(!checkVariables())
+        .background((!checkVariables()) ? Color.blue.opacity(0.5): Color.blue)
+        .cornerRadius(10)
     }
     // MARK: - From
     @ViewBuilder
@@ -112,14 +119,9 @@ extension SearchView {
     }
     
     func checkVariables() -> Bool{
-        guard let fromText = fromTitle else{
+        if fromTitle == nil || toTitle == nil{
             return false
         }
-        
-        guard let toTitle = fromTitle else{
-            return false
-        }
-        
         return true
     }
 }
