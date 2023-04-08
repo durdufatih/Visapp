@@ -10,10 +10,9 @@ import SwiftUI
 struct SearchView: View {
     
     // MARK: - Properties
-    @State private var fromTitle: String?
-    @State private var toTitle: String?
+    @EnvironmentObject var viewModel: CountryListViewModel
     @State private var showCountryListView = false
-    @State private var selectFromTitle : Bool?
+    @State private var selectFromTitle :Bool?
     
     // MARK: - Body
     var body: some View {
@@ -35,7 +34,7 @@ struct SearchView: View {
             }
             .navigationTitle("Search")
             .sheet(isPresented: $showCountryListView) {
-                CountryListView(viewModel: CountryListViewModel(),selectedItem: self.selectFromTitle ?? false ? $fromTitle:$toTitle)
+                CountryListView(fromCheck: $selectFromTitle)
             }
         }
     }
@@ -43,7 +42,7 @@ struct SearchView: View {
     @ViewBuilder
     private var actionButton:some View{
         Button {
-            print("Action \(self.fromTitle!) to \(self.toTitle!)")
+            print("Action \(viewModel.fromData.id!) to \(viewModel.toData.id!)")
                 
         } label: {
             Text("Trip To Advanture")
@@ -53,8 +52,8 @@ struct SearchView: View {
                 .font(.callout)
                 .hAlignment(.center)
         }
-        .disabled(!checkVariables())
-        .background((!checkVariables()) ? Color.blue.opacity(0.5): Color.blue)
+        .disabled(!viewModel.checkDestinations())
+        .background((!viewModel.checkDestinations()) ? Color.blue.opacity(0.5): Color.blue)
         .cornerRadius(10)
     }
     // MARK: - From
@@ -68,10 +67,10 @@ struct SearchView: View {
         
         /// From Button
         Button {
-            self.selectFromTitle = true
+            selectFromTitle = true
             selectFrom()
         } label: {
-            Text(fromTitle ?? "Select From")
+            Text(viewModel.fromData.name.isEmpty ? "Select from" : viewModel.fromData.name)
                 .hAlignment(.leading)
         }
         .font(.callout)
@@ -94,10 +93,10 @@ struct SearchView: View {
         
         /// From Button
         Button {
-            self.selectFromTitle = false
+            selectFromTitle = false
             selectFrom()
         } label: {
-            Text(toTitle ?? "Select To")
+            Text(viewModel.toData.name.isEmpty ? "Select To": viewModel.toData.name)
                 .hAlignment(.leading)
         }
         .font(.callout)
@@ -118,16 +117,10 @@ extension SearchView {
         showCountryListView.toggle()
     }
     
-    func checkVariables() -> Bool{
-        if fromTitle == nil || toTitle == nil{
-            return false
-        }
-        return true
-    }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView().environmentObject(CountryListViewModel())
     }
 }

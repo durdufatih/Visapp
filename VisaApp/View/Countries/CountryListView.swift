@@ -10,25 +10,34 @@ import SwiftUI
 struct CountryListView: View {
     
     // MARK: - Properties
-    @StateObject var viewModel: CountryListViewModel
+    @EnvironmentObject var viewModel: CountryListViewModel
     private let grid = [GridItem()]
     @Environment(\.presentationMode) var presentationMode
-    @Binding  var selectedItem:String?
+    @Binding  var fromCheck:Bool?
+    @State var selectResult: Bool = false
     
     // MARK: - Body
     var body: some View {
-        
         ZStack {
             ///
             Color.yellow
                 .ignoresSafeArea()
             ///
+            
+            
             ScrollView() {
                 LazyVGrid(columns: grid) {
-                    ForEach(viewModel.countries, id: \.id) { country in
+                   // let activeCountryList = viewModel.countries.filter{ fromCheck! ? ($0.name != viewModel.fromData.name):($0.name != viewModel.toData.name)
+                    
+                    ForEach(viewModel.getSelectableList(fromCheck: fromCheck! ), id: \.id) { country in
+                        
                         Button {
-                            selectedItem = country.name
+                            
+                            viewModel.setCountryData(country: country, fromCheck: fromCheck!)
+                            selectResult = true
                             self.presentationMode.wrappedValue.dismiss()
+                            
+                            
                         } label: {
                             CountryListCellView(title: country.name)
                         }
@@ -36,7 +45,7 @@ struct CountryListView: View {
                     }
                 }
                 .padding(15)
-            }.interactiveDismissDisabled((selectedItem?.isEmpty ?? false))
+            }.interactiveDismissDisabled(selectResult)
         }
         .onAppear {
             viewModel.fetchCountryList()

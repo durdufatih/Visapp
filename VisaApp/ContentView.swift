@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var countryListModel = CountryListViewModel()
     var body: some View {
-        SearchView()
+        SearchView().environmentObject(countryListModel)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(CountryListViewModel())
     }
 }
