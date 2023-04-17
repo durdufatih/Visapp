@@ -45,8 +45,7 @@ struct SearchView: View {
                 Text("Trip To Advanture")
                     .padding(10)
                     .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .font(.callout)
+                    .font(.callout.bold())
                     .hAlignment(.center)
             }
             .disabled(!viewModel.checkDestinations())
@@ -71,8 +70,7 @@ struct SearchView: View {
             Text(viewModel.fromData.name.isEmpty ? "Select from" : viewModel.fromData.name)
                 .hAlignment(.leading)
         }
-        .font(.callout)
-        .fontWeight(.medium)
+        .font(.callout.bold())
         .tint(.white)
         .hAlignment(.center)
         .fillView(.black)
@@ -97,8 +95,7 @@ struct SearchView: View {
             Text(viewModel.toData.name.isEmpty ? "Select To": viewModel.toData.name)
                 .hAlignment(.leading)
         }
-        .font(.callout)
-        .fontWeight(.medium)
+        .font(.callout.bold())
         .tint(.white)
         .hAlignment(.center)
         .fillView(.black)
