@@ -12,13 +12,11 @@ struct Country: Identifiable, Codable {
     
     @DocumentID var id: String? // code
     var name: String
-    let flag: String
-    let flagUrl: String
+    let code : String
     
     enum CodingKeys: CodingKey {
-        case id
+        //case id
         case name
-        case flag
-        case flagUrl
+        case code
     }
 }

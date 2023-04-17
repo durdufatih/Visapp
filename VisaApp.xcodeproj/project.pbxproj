@@ -27,6 +27,9 @@
 		3CB315252978822000D3C6E3 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB315242978822000D3C6E3 /* FirebaseDatabaseSwift */; };
 		3CB31528297D54EF00D3C6E3 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB31527297D54EF00D3C6E3 /* CountryListView.swift */; };
 		3CB3152A297D617500D3C6E3 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */; };
+		3D86276729ECD08F00E43FAB /* RequirementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86276629ECD08F00E43FAB /* RequirementsView.swift */; };
+		3D86276A29ED12FB00E43FAB /* RequirementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86276929ED12FB00E43FAB /* RequirementsViewModel.swift */; };
+		3D86276C29ED135F00E43FAB /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86276B29ED135F00E43FAB /* Requirement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		3CB3151B297875AB00D3C6E3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		3CB31527297D54EF00D3C6E3 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		3D86276629ECD08F00E43FAB /* RequirementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsView.swift; sourceTree = "<group>"; };
+		3D86276929ED12FB00E43FAB /* RequirementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsViewModel.swift; sourceTree = "<group>"; };
+		3D86276B29ED135F00E43FAB /* Requirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			children = (
 				3C1FE7FF29770DC500DFE087 /* SearchView.swift */,
 				3CB3152B297D64A300D3C6E3 /* Countries */,
+				3D86276829ED127700E43FAB /* Requirements */,
 				3C1FE8042977224F00DFE087 /* ResultsView.swift */,
 			);
 			path = View;
@@ -183,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				3CB3151329786EF300D3C6E3 /* Country.swift */,
+				3D86276B29ED135F00E43FAB /* Requirement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +217,15 @@
 				3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */,
 			);
 			path = Countries;
+			sourceTree = "<group>";
+		};
+		3D86276829ED127700E43FAB /* Requirements */ = {
+			isa = PBXGroup;
+			children = (
+				3D86276629ECD08F00E43FAB /* RequirementsView.swift */,
+				3D86276929ED12FB00E43FAB /* RequirementsViewModel.swift */,
+			);
+			path = Requirements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,9 +369,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D86276729ECD08F00E43FAB /* RequirementsView.swift in Sources */,
+				3D86276C29ED135F00E43FAB /* Requirement.swift in Sources */,
 				3C1FE7D629770C6100DFE087 /* ContentView.swift in Sources */,
 				3C1FE80029770DC500DFE087 /* SearchView.swift in Sources */,
 				3CB3151C297875AB00D3C6E3 /* FirebaseManager.swift in Sources */,
+				3D86276A29ED12FB00E43FAB /* RequirementsViewModel.swift in Sources */,
 				3CB3152A297D617500D3C6E3 /* CountryListViewModel.swift in Sources */,
 				3CB31528297D54EF00D3C6E3 /* CountryListView.swift in Sources */,
 				3C1FE80329770E4200DFE087 /* View+Utils.swift in Sources */,
@@ -515,7 +535,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisaApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				DEVELOPMENT_TEAM = 736439KKK6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -553,7 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisaApp/Preview Content\"";
-				DEVELOPMENT_TEAM = RMVH5NNSDU;
+				DEVELOPMENT_TEAM = 736439KKK6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

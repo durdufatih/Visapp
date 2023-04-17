@@ -16,8 +16,7 @@ struct SearchView: View {
     
     // MARK: - Body
     var body: some View {
-        NavigationView {
-            ScrollView {
+            
                 VStack {
                     /// From
                     fromView
@@ -30,31 +29,30 @@ struct SearchView: View {
                     
                 }
                 .padding(15)
-                .vAlign(.top)
-            }
-            .navigationTitle("Search")
+                .vAlign(.center)
             .sheet(isPresented: $showCountryListView) {
                 CountryListView(fromCheck: $selectFromTitle)
             }
         }
-    }
+    
     
     @ViewBuilder
     private var actionButton:some View{
-        Button {
-            print("Action \(viewModel.fromData.id!) to \(viewModel.toData.id!)")
-                
-        } label: {
-            Text("Trip To Advanture")
-                .padding(10)
-                .foregroundColor(.white)
-                .fontWeight(.bold)
-                .font(.callout)
-                .hAlignment(.center)
-        }
-        .disabled(!viewModel.checkDestinations())
-        .background((!viewModel.checkDestinations()) ? Color.blue.opacity(0.5): Color.blue)
-        .cornerRadius(10)
+        
+        NavigationLink {
+                RequirementsView(fromCode: viewModel.fromData.code, toCode: viewModel.toData.code)
+            } label: {
+                Text("Trip To Advanture")
+                    .padding(10)
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .font(.callout)
+                    .hAlignment(.center)
+            }
+            .disabled(!viewModel.checkDestinations())
+            .background((!viewModel.checkDestinations()) ? Color.blue.opacity(0.5): Color.blue)
+            .cornerRadius(10)
+        
     }
     // MARK: - From
     @ViewBuilder

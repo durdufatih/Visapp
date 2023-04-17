@@ -25,21 +25,23 @@ protocol CountryListViewModelProtocol: ObservableObject {
     func getSelectableList(fromCheck:Bool)->[Country]
 }
 
-class CountryListViewModel: ObservableObject, CountryListViewModelProtocol {
+class CountryListViewModel: CountryListViewModelProtocol {
+    
+    
+    
+    @Published var countries: [Country] = []
+    @Published var fromData: Country = Country.init(name: "", code:"")
+    @Published var toData: Country = Country.init(name: "", code:"")
+    
+    
     func getSelectableList(fromCheck:Bool) -> [Country] {
         if fromCheck {
             return countries.filter({$0.name != self.toData.name})
         }
         else{
-            return countries.filter({$0.name != self.fromData.name})
+            return countries.filter({$0.code == "GB"})
         }
     }
-    
-    
-    @Published var countries: [Country] = []
-    @Published var fromData: Country = Country.init(name: "", flag: "", flagUrl: "")
-    @Published var toData: Country = Country.init(name: "", flag: "", flagUrl: "")
-    
     
     func fetchCountryList() {
         
@@ -55,7 +57,6 @@ class CountryListViewModel: ObservableObject, CountryListViewModelProtocol {
     
     
     func setCountryData(country: Country, fromCheck: Bool) {
-        print("Country: \(country.name) fromCheck: \(fromCheck)")
         if fromCheck {
             self.fromData = country
         }

@@ -27,9 +27,8 @@ struct CountryListView: View {
             
             ScrollView() {
                 LazyVGrid(columns: grid) {
-                   // let activeCountryList = viewModel.countries.filter{ fromCheck! ? ($0.name != viewModel.fromData.name):($0.name != viewModel.toData.name)
                     
-                    ForEach(viewModel.getSelectableList(fromCheck: fromCheck! ), id: \.id) { country in
+                    ForEach(viewModel.getSelectableList(fromCheck: fromCheck! ), id: \.code) { country in
                         
                         Button {
                             

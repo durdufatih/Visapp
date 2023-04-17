@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State var countryListModel = CountryListViewModel()
+    @State var requirementModel = RequirementsViewModel()
     var body: some View {
-        SearchView().environmentObject(countryListModel)
+        NavigationView {
+            SearchView()
+               
+        }.navigationTitle("")
+         .navigationBarTitleDisplayMode(.inline).environmentObject(requirementModel)
+         .environmentObject(countryListModel)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(CountryListViewModel())
+        ContentView()
+            .environmentObject(CountryListViewModel())
+            .environmentObject(RequirementsViewModel())
     }
 }
