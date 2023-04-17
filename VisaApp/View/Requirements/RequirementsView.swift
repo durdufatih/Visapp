@@ -17,7 +17,10 @@ struct RequirementsView: View {
     var body: some View {
         VStack{
             if viewModel.countryRequirement.isEmpty{
-                Text("Visa free for your country!!").font(.title).frame(maxHeight: .infinity,alignment: .center)
+                Text("No Data!!").font(.title).frame(maxHeight: .infinity,alignment: .center)
+            }
+            if viewModel.countryRequirement.count == 1{
+                Text(viewModel.countryRequirement.first!.name).font(.title).frame(maxHeight: .infinity,alignment: .center)
             }
             else{
                 ScrollView() {
