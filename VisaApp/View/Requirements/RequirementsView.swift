@@ -19,7 +19,7 @@ struct RequirementsView: View {
             if viewModel.countryRequirement.isEmpty{
                 Text("No Data!!").font(.title).frame(maxHeight: .infinity,alignment: .center)
             }
-            if viewModel.countryRequirement.count == 1{
+            else if viewModel.countryRequirement.count == 1{
                 Text(viewModel.countryRequirement.first!.name).font(.title).frame(maxHeight: .infinity,alignment: .center)
             }
             else{
