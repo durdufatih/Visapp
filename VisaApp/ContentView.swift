@@ -17,6 +17,7 @@ struct ContentView: View {
         }.navigationTitle("")
          .navigationBarTitleDisplayMode(.inline).environmentObject(requirementModel)
          .environmentObject(countryListModel)
+         .navigationViewStyle(.stack)
     }
 }
 
