@@ -17,7 +17,7 @@ struct RequirementsView: View {
     var body: some View {
         VStack{
             if viewModel.countryRequirement.isEmpty{
-                Text("No Data!!").font(.title).frame(maxHeight: .infinity,alignment: .center)
+                Text("Visit https://www.gov.uk/check-uk-visa/y").font(.title).frame(maxHeight: .infinity,alignment: .center)
             }
             else if viewModel.countryRequirement.count == 1{
                 Text(viewModel.countryRequirement.first!.name).font(.title).frame(maxHeight: .infinity,alignment: .center)
