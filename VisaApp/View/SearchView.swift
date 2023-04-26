@@ -71,9 +71,9 @@ struct SearchView: View {
                 .hAlignment(.leading)
         }
         .font(.callout.bold())
-        .tint(.white)
+        .tint(.blue)
         .hAlignment(.center)
-        .fillView(.black)
+        .fillView(.primary)
     }
 
     
@@ -96,9 +96,9 @@ struct SearchView: View {
                 .hAlignment(.leading)
         }
         .font(.callout.bold())
-        .tint(.white)
+        .tint(.blue)
         .hAlignment(.center)
-        .fillView(.black)
+        .fillView(.primary)
     }
     
 }
