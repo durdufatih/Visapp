@@ -39,6 +39,7 @@ struct RequirementsView: View {
             
         }.onAppear {
             viewModel.getRequirements(from: fromCode, to: toCode)
+            Interstitial().showAd()
         }
     }
 }

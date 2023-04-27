@@ -27,6 +27,10 @@
 		3CB315252978822000D3C6E3 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB315242978822000D3C6E3 /* FirebaseDatabaseSwift */; };
 		3CB31528297D54EF00D3C6E3 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB31527297D54EF00D3C6E3 /* CountryListView.swift */; };
 		3CB3152A297D617500D3C6E3 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */; };
+		3D29C72329FA5AA60070771C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3D29C72229FA5AA60070771C /* GoogleMobileAds */; };
+		3D29C72529FA5B3D0070771C /* BannerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D29C72429FA5B3D0070771C /* BannerRepresentable.swift */; };
+		3D29C72729FA5B6E0070771C /* AdmobIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D29C72629FA5B6E0070771C /* AdmobIds.swift */; };
+		3D29C72929FA5FEE0070771C /* InterstitalAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D29C72829FA5FEE0070771C /* InterstitalAdView.swift */; };
 		3D86276729ECD08F00E43FAB /* RequirementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86276629ECD08F00E43FAB /* RequirementsView.swift */; };
 		3D86276A29ED12FB00E43FAB /* RequirementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86276929ED12FB00E43FAB /* RequirementsViewModel.swift */; };
 		3D86276C29ED135F00E43FAB /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86276B29ED135F00E43FAB /* Requirement.swift */; };
@@ -69,6 +73,9 @@
 		3CB3151B297875AB00D3C6E3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		3CB31527297D54EF00D3C6E3 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		3D29C72429FA5B3D0070771C /* BannerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerRepresentable.swift; sourceTree = "<group>"; };
+		3D29C72629FA5B6E0070771C /* AdmobIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobIds.swift; sourceTree = "<group>"; };
+		3D29C72829FA5FEE0070771C /* InterstitalAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitalAdView.swift; sourceTree = "<group>"; };
 		3D86276629ECD08F00E43FAB /* RequirementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsView.swift; sourceTree = "<group>"; };
 		3D86276929ED12FB00E43FAB /* RequirementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsViewModel.swift; sourceTree = "<group>"; };
 		3D86276B29ED135F00E43FAB /* Requirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
@@ -79,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D29C72329FA5AA60070771C /* GoogleMobileAds in Frameworks */,
 				3CB315252978822000D3C6E3 /* FirebaseDatabaseSwift in Frameworks */,
 				3CB3151A2978722500D3C6E3 /* FirebaseAuth in Frameworks */,
 				3CB315232978785300D3C6E3 /* FirebaseStorage in Frameworks */,
@@ -170,7 +178,8 @@
 		3C1FE7FE29770C9600DFE087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3C1FE7FF29770DC500DFE087 /* SearchView.swift */,
+				3D29C72A29FA5FF20070771C /* AdsViews */,
+				3D29C72429FA5B3D0070771C /* BannerRepresentable.swift */,
 				3CB3152B297D64A300D3C6E3 /* Countries */,
 				3D86276829ED127700E43FAB /* Requirements */,
 				3C1FE8042977224F00DFE087 /* ResultsView.swift */,
@@ -191,6 +200,7 @@
 			children = (
 				3CB3151329786EF300D3C6E3 /* Country.swift */,
 				3D86276B29ED135F00E43FAB /* Requirement.swift */,
+				3D29C72629FA5B6E0070771C /* AdmobIds.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +227,15 @@
 				3CB31529297D617500D3C6E3 /* CountryListViewModel.swift */,
 			);
 			path = Countries;
+			sourceTree = "<group>";
+		};
+		3D29C72A29FA5FF20070771C /* AdsViews */ = {
+			isa = PBXGroup;
+			children = (
+				3C1FE7FF29770DC500DFE087 /* SearchView.swift */,
+				3D29C72829FA5FEE0070771C /* InterstitalAdView.swift */,
+			);
+			path = AdsViews;
 			sourceTree = "<group>";
 		};
 		3D86276829ED127700E43FAB /* Requirements */ = {
@@ -250,6 +269,7 @@
 				3CB315202978784500D3C6E3 /* FirebaseFirestore */,
 				3CB315222978785300D3C6E3 /* FirebaseStorage */,
 				3CB315242978822000D3C6E3 /* FirebaseDatabaseSwift */,
+				3D29C72229FA5AA60070771C /* GoogleMobileAds */,
 			);
 			productName = VisaApp;
 			productReference = 3C1FE7D029770C6100DFE087 /* VisaApp.app */;
@@ -325,6 +345,7 @@
 			mainGroup = 3C1FE7C729770C6100DFE087;
 			packageReferences = (
 				3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3D29C72129FA5AA60070771C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 3C1FE7D129770C6100DFE087 /* Products */;
 			projectDirPath = "";
@@ -371,6 +392,8 @@
 			files = (
 				3D86276729ECD08F00E43FAB /* RequirementsView.swift in Sources */,
 				3D86276C29ED135F00E43FAB /* Requirement.swift in Sources */,
+				3D29C72729FA5B6E0070771C /* AdmobIds.swift in Sources */,
+				3D29C72929FA5FEE0070771C /* InterstitalAdView.swift in Sources */,
 				3C1FE7D629770C6100DFE087 /* ContentView.swift in Sources */,
 				3C1FE80029770DC500DFE087 /* SearchView.swift in Sources */,
 				3CB3151C297875AB00D3C6E3 /* FirebaseManager.swift in Sources */,
@@ -379,6 +402,7 @@
 				3CB31528297D54EF00D3C6E3 /* CountryListView.swift in Sources */,
 				3C1FE80329770E4200DFE087 /* View+Utils.swift in Sources */,
 				3C1FE8052977224F00DFE087 /* ResultsView.swift in Sources */,
+				3D29C72529FA5B3D0070771C /* BannerRepresentable.swift in Sources */,
 				3CB3151429786EF300D3C6E3 /* Country.swift in Sources */,
 				3C1FE7D429770C6100DFE087 /* VisaAppApp.swift in Sources */,
 			);
@@ -543,6 +567,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VisaApp/SupportingFiles/GoogleService-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Visaapp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -588,6 +613,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VisaApp/SupportingFiles/GoogleService-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Visaapp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -762,6 +788,14 @@
 				kind = branch;
 			};
 		};
+		3D29C72129FA5AA60070771C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -789,6 +823,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3CB315182978722500D3C6E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabaseSwift;
+		};
+		3D29C72229FA5AA60070771C /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D29C72129FA5AA60070771C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

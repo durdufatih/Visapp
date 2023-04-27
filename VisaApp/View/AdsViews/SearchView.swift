@@ -16,20 +16,27 @@ struct SearchView: View {
     
     // MARK: - Body
     var body: some View {
-            
-                VStack {
-                    /// From
-                    fromView
-                    
-                    /// To
-                    toView
-                    
-                    ///Action button
-                    actionButton.padding(.vertical)
-                    
-                }
-                .padding(15)
-                .vAlign(.center)
+        VStack{
+            VStack {
+                /// From
+                fromView
+                
+                /// To
+                toView
+                
+                ///Action button
+                actionButton.padding(.vertical)
+                
+                
+                
+            }
+            .padding(15)
+            .vAlign(.center)
+            Spacer()
+            VStack{
+                BannerVC()
+            }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 50, maxHeight: 100)
+        }
             .sheet(isPresented: $showCountryListView) {
                 CountryListView(fromCheck: $selectFromTitle)
             }
