@@ -56,10 +56,6 @@ class FirebaseManager: FirebaseManagerProtocol {
                 self?.requirementListener?.remove()
                 return
             }
-            
-           /* let result = query?.documents.fi{ item in
-                item.documentID == "\(from)_TO_\(to)"
-            }*/
         
             do{
                 let resultData =  try query?.documents.filter { $0.documentID == "\(from)_TO_\(to)"}

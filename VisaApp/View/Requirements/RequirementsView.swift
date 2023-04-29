@@ -15,6 +15,7 @@ struct RequirementsView: View {
     var toCode: String
     
     var body: some View {
+    
         VStack{
             if viewModel.countryRequirement.isEmpty{
                 Text("Visit https://www.gov.uk/check-uk-visa/y").font(.title).frame(maxHeight: .infinity,alignment: .center)
@@ -38,7 +39,10 @@ struct RequirementsView: View {
             }
             
         }.onAppear {
-            viewModel.getRequirements(from: fromCode, to: toCode)
+            DispatchQueue.main.async {
+                viewModel.getRequirements(from: fromCode, to: toCode)
+            }
+            
             Interstitial().showAd()
         }
     }
